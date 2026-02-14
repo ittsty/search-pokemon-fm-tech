@@ -1,0 +1,22 @@
+"use client";
+
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+
+const Searchbar = () => {
+  const [value, setValue] = useState("");
+
+  return (
+    <form className="relative">
+      <input
+        className="
+          w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl bg-gray-50 text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-blue-500 focus:shadow-sm"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Search Pokémon (e.g. Pikachu)"
+      />
+    </form>
+  );
+};
+
+export default Searchbar;
