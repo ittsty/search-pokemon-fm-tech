@@ -16,7 +16,7 @@ const HomeView = () => {
         </h1>
         <Suspense fallback={<p>Loading search...</p>}>
           <Searchbar />
-        </Sus>
+        </Suspense>
       </section>
       <PokemonDetail name={name} />
     </main>
