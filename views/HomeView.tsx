@@ -3,7 +3,6 @@
 import PokemonDetail from "@/components/PokemonDetail";
 import Searchbar from "@/components/Searchbar";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
 
 const HomeView = () => {
   const searchParams = useSearchParams();
@@ -14,9 +13,7 @@ const HomeView = () => {
         <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
           Pokémon Search
         </h1>
-        <Suspense fallback={<p>Loading search...</p>}>
           <Searchbar />
-        </Suspense>
       </section>
       <PokemonDetail name={name} />
     </main>
