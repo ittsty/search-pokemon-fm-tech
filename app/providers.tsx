@@ -7,6 +7,5 @@ export default function Providers({
 }: {
   children: React.ReactNode;
 }) {
-      console.log("Apollo client:", apolloClient);
   return <ApolloProvider client={apolloClient}>{children}</ApolloProvider>;
 }
